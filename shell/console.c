@@ -75,7 +75,7 @@ void update_cursor(){
 
 
 
-void print_integer(int num){
+void printInteger(int num){
 	char* buffer = character_buffer;
 	char* str = itoa(buffer, num);
 	print_string(str);
