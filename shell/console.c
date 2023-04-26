@@ -8,7 +8,7 @@ int loopExit = 0;
 Color font_color = LIGHT_GRAY;
 
 void clear_terminal(){
-	for(int i=0; i<VGA_TOTAL_BYTES; i+=2){
+	for(int i=0; i<VGA_WIDTH*VGA_HEIGHT*VGA_BYTES_PER_CHARACTER; i+=2){
 		VGA_BUFFER[i] = 0;
 		VGA_BUFFER[i+1] = font_color;
 	}
@@ -96,10 +96,10 @@ void output_prompt(){
 void read_command(){
 	int type = 1;
 	unsigned char byte;
-        while (typing) {
+        while (type) {
                 while (byte = scan()) {
                         if (byte == ENTER){
-                        	divide_command();
+                        	split_command();
                         	handle_command();
                         	clear_buffer(command_buffer[1]);
                                  clear_buffer(charbuffer);

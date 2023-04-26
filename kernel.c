@@ -7,7 +7,7 @@ void main(){
         while (1) {
         	output_prompt();
         	read_command();
-        	if(exitLoop)
+        	if(loopExit)
         		break;
                 
         }
