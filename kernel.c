@@ -2,13 +2,14 @@
 #include "keyboard.h"
 void main(){
 	clear_terminal();
-	unsigned char byte;
-	printInteger(878);
+	
+	//printInteger(876);
         while (1) {
-                while (byte = scan()) {
-                        
-                        print_character(charmap[byte]);
-                }
+        	output_prompt();
+        	read_command();
+        	if(exitLoop)
+        		break;
+                
         }
 
 	return ;
