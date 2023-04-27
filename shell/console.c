@@ -124,7 +124,7 @@ void handle_command(){
 	else if(strcmp(command_buffer[1], "help") == 0){
 		print_string(help_list);		
 	}
-	else if(strcmp(command_buffer[1], "set-terminal-color") == 0){
+	else if(strcmp(command_buffer[1], "set-terminal-font-color") == 0){
 		set_terminal_fcolor();
 		print_string("\n");
 	}
